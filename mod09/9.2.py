@@ -7,7 +7,14 @@ class Auto:
 
     def kiihdytä(self, nopeus):
         self.tämänhetkinen_nopeus = self.tämänhetkinen_nopeus + nopeus
+
+        if self.tämänhetkinen_nopeus > self.huippunopeus:
+            self.tämänhetkinen_nopeus = self.huippunopeus
+
+        elif self.tämänhetkinen_nopeus < 0:
+            self.tämänhetkinen_nopeus = 0
         return
+
 
 auto = Auto("ABC-123", "142 km/h", 0, 0)
 
