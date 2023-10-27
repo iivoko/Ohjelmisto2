@@ -16,7 +16,7 @@ class Auto:
         return
 
     def kulje(self, aika):
-        self.kuljettu_matka = aika * self.tämänhetkinen_nopeus
+        self.kuljettu_matka = self.kuljettu_matka + (aika * self.tämänhetkinen_nopeus)
         return
 
 
