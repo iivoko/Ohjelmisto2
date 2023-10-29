@@ -26,7 +26,6 @@ class Hissi:
         print("hissi on nyt kohteessa")
         return
 
+hissi = Hissi(1, 6)
 
-h = Hissi(1, 6)
-
-h.siirry_kerrokseen(5)
+hissi.siirry_kerrokseen(6)

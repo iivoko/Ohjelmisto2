@@ -42,8 +42,8 @@ class Talo:
         print(f"Hissi {hissinro} on nyt siirtynyt kerrokseen {kohde}")
         return
 
+    def firealarm(self):
+        for hissi in self.hissit:
+
 
 talo = Talo(1, 10, 5)
-talo.aja_hissia(5,7)
-talo.aja_hissia(1,2)
-talo.aja_hissia(4,4)
