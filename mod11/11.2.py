@@ -15,16 +15,21 @@ class Sähköauto(Auto):
         self.akku_kw = akku_kw
         super().__init__(rekisteritunnus, huippunopeus, nopeus, matka)
 
-        def kulje(self, aika):
-            super().kulje(aika)
+    def kulje(self, aika):
+        super().kulje(aika)
 
 
 class Polttomoottoriauto(Auto):
     def __init__(self, rekisteritunnus, huippunopeus, nopeus, matka, bensa_ltr):
         self.bensa_ltr = bensa_ltr
         super().__init__(rekisteritunnus, huippunopeus, nopeus, matka)
-    def kulje(self,aika):
+
+    def kulje(self, aika):
         super().kulje(aika)
+
 
 shk = Sähköauto("ABC-15", 180, 85, 0, 52.5)
 plt = Polttomoottoriauto("ACD-123", 165, 63, 0, 32.3)
+shk.kulje(3.5)
+plt.kulje(2)
+print(f"Sähköauto on ajanut {shk.matka}km ja polttomoottoriauto on ajanut {plt.matka}km")
